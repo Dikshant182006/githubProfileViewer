@@ -1,0 +1,18 @@
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d111768;   /* dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;   /* scrollbar color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;   /* hover effect */
+  cursor: pointer;
+}
