@@ -39,12 +39,10 @@ input::placeholder {
 }
 
 button[type="submit"] {
-  right: 50px;
-  top: 25px;
   padding: 10px;
-  border-radius: 40px;
+  border-radius: 20px;
   border: none;
-  background-color: #141413bd;
+  background-color: rgb(151, 147, 147);
   color: white;
   font-weight: 700;
   cursor: pointer;
@@ -101,10 +99,7 @@ button[type="submit"] {
   gap: 20px;
 }
 
-.box1,
-.box2,
-.box3,
-.box4 {
+.repo-card {
   background-color: rgba(44, 43, 43, 0.71);
   flex: 1 1 400px;
   padding: 30px;
@@ -135,4 +130,8 @@ button[type="submit"] {
     align-items: center;
     margin: 10px 30px;
     border-radius: 10px;
+}
+
+.container2{
+  flex-direction: column;
 }

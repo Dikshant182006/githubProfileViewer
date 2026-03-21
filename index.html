@@ -17,111 +17,48 @@
         <button type="submit">Go</button>
     </form>
     
+    <div class="container2">
         <div class="profile-card">
             <p class="avatar">OC</p>
             <div class="description">
-                <h2 class="headname">Octocat</h2>
-                <p class="email">@octocat</p>
-                <p class="name">San Francisco, CA</p>
-                <p class="link">github.com/octocat</p>
-                <p class="date">Joined: Jan 2011</p>
+                <h2 class="headname"></h2>
+                <p class="email"></p>
+                <p class="location"></p>
+                <p class="link"></p>
+                <p class="date"></p>
             </div>
         </div>
 
         <section class="middle">
             <div class="repo">
                 <h3>Repositories</h3>
-                <h4>62</h4>
+                <h4 id="repo"></h4>
             </div>
             <div class="followers">
                 <h3>Followers</h3>
-                <h4>4.2K</h4>
+                <h4 id="followers"></h4>
             </div>
             <div class="following">
                 <h3>Following</h3>
-                <h4>9</h4>
+                <h4 id="following"></h4>
             </div>
         </section>
 
         <section class="top-repo">
             <h2 id="text-repo">Top Repositories</h2>
-            <div class="header">
-                <div class="box1">
-                    <div class="repo-header">
-                        <a href="#" class="action">Hello World</a>
-                        <p>My first repository on Github</p>
-                    </div>
-                    <div class="repo-footer">
-                        <div class="repo-lang">
-                            <span class="lang-dot" style="background-color: #f1e05a;"></span>
-                            <span class="lang-name">JavaScript</span>
-                        </div>
-                        <div class="repo-stars">
-                            <span class="star-icon">★</span>
-                            <span class="star-count">1.8k</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="box2">
-
-                    <div class="repo-header">
-                        <a href="#" class="action">Spoon-Knife</a>
-                        <p>A repo for practicing fork requests</p>
-                    </div>
-                    <div class="repo-footer">
-                        <div class="repo-lang">
-                            <span class="lang-dot" style="background-color: orange;"></span>
-                            <span class="lang-name">HTML</span>
-                        </div>
-                        <div class="repo-stars">
-                            <span class="star-icon">★</span>
-                            <span class="star-count">1.2k</span>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="box3">
-
-                <div class="repo-header">
-                    <a href="#" class="action">octocat.github.io</a>
-                    <p>Personal website</p>
-                </div>
-                <div class="repo-footer">
-                    <div class="repo-lang">
-                        <span class="lang-dot" style="background-color: blue;"></span>
-                        <span class="lang-name">Python</span>
-                    </div>
-                    <div class="repo-stars">
-                        <span class="star-icon">★</span>
-                        <span class="star-count">340</span>
-                    </div>
-                </div>
+            <div class="header" id="repo-container">
             </div>
-
-    <div class="box4">
-
-        <div class="repo-header">
-            <a href="#" class="action">linguist</a>
-            <p>Language Savant - Detect language</p>
-        </div>
-        <div class="repo-footer">
-            <div class="repo-lang">
-                <span class="lang-dot" style="background-color: maroon;"></span>
-                <span class="lang-name">Ruby</span>
-            </div>
-            <div class="repo-stars">
-                <span class="star-icon">★</span>
-                <span class="star-count">11k</span>
-            </div>
-        </div>
+        </section>
     </div>
     </div>
-</section>
+</div>
 
 <footer class="errorhandle" style="display: none;">
     <p>Error state: "User not found" </p>
 </footer>
 </div>
 
+
+<script src="script.js"></script>
 </body>
 </html>
