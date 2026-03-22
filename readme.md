@@ -32,7 +32,7 @@ A responsive GitHub User Finder web app that fetches and displays real-time GitH
 ### Main UI
 <img src="img/main-ui.png.png" width="900" alt="GitHub User Finder UI">
 
-### Main UI
+### Error UI
 <img src="img/error-state.png.png" width="900" alt="GitHub User Finder Error UI">
 
 
