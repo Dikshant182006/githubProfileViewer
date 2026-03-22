@@ -21,6 +21,7 @@ searchContainer.addEventListener("submit", async (e) => {
 
   if (username) {
     try {
+      hideError();
       // display userdata
       const userData = await getUserData(username);
       displayUserInfo(userData);
@@ -28,7 +29,9 @@ searchContainer.addEventListener("submit", async (e) => {
       // display repodata
       const reposData = await getUserRepos(username);
       displayTopRepos(reposData);
-        } catch (error) {
+
+      containers.style.display = "flex";
+      } catch (error) {
       console.error("User not found");
       displayError(error.message); // display the error in the UI.
     }
@@ -115,8 +118,6 @@ function displayTopRepos(repos){
   .sort((a, b) => b.stargazers_count - a.stargazers_count) // decending ⭐
   .slice(0, 4); 
 
-  console.log(topRepos);
-
   if(topRepos.length === 0){
     const emptyMessage = document.createElement("p");
     emptyMessage.textContent = "No repositories available";
@@ -158,12 +159,14 @@ function clearRepos(){
   repoContainer.innerHTML = "";
 }
 
-function displayError(message) {
-  const errorDisplay = document.createElement("p");
-  errorDisplay.textContent = message;
-  errorDisplay.classList.add("errorhandle");
+function hideError() {
+  errorhandle.style.display = "none";
+  errorhandle.textContent = "";
+}
 
-  containers.textContent = "";
-  containers.style.display = "flex";
-  containers.appendChild(errorDisplay);
+function displayError(message) {
+  errorhandle.style.display = "flex";
+  errorhandle.textContent = message;
+
+  containers.style.display = "none";
 }

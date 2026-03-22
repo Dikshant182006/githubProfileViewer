@@ -1,13 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
+:root {
+  --bg-color: #000000;
+  --card-color: rgba(44, 43, 43, 0.9);
+  --card-color-light: rgba(59, 58, 58, 0.737);
+  --card-color-soft: rgba(44, 43, 43, 0.71);
+  --avatar-bg: #141413c0;
+
+  --text-color: #e6edf3;
+  --secondary-text: #8b949e;
+
+  --border-color: #30363d;
+  --error-bg: rgba(255, 0, 0, 0.32);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
 }
 
@@ -23,33 +37,33 @@ body {
 }
 
 input::placeholder {
-  color: white;
+  color: var(--secondary-text);
 }
 
 #input {
   flex: 1;
   padding: 15px 30px;
-  background-color: rgba(44, 43, 43, 0.737);
+  background-color: var(--card-color-light);
   border-radius: 15px;
-  border: none;
-  color: white;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
   outline: 0;
-  border: 1px solid grey;
   font-size: 16px;
 }
 
 button[type="submit"] {
-  padding: 10px;
+  padding: 15px;
   border-radius: 20px;
   border: none;
-  background-color: rgb(151, 147, 147);
-  color: white;
+  background-color: var(--card-color-light);
+  color: var(--text-color);
   font-weight: 700;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .profile-card {
-  background-color: rgba(44, 43, 43, 0.911);
+  background-color: var(--card-color);
   margin-top: 20px;
   border-radius: 20px;
   display: flex;
@@ -60,7 +74,7 @@ button[type="submit"] {
 
 .avatar {
   padding: 20px;
-  background-color: #141413c0;
+  background-color: var(--avatar-bg);
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -80,7 +94,7 @@ button[type="submit"] {
 .followers,
 .following {
   flex: 1 1 250px;
-  background-color: rgb(44, 43, 43);
+  background-color: var(--card-color);
   border-radius: 10px;
   padding: 40px;
   display: flex;
@@ -90,7 +104,7 @@ button[type="submit"] {
 }
 
 #text-repo {
-    margin: 20px 0px 10px 0px;
+  margin: 20px 0px 10px 0px;
 }
 
 .header {
@@ -100,17 +114,15 @@ button[type="submit"] {
 }
 
 .repo-card {
-  background-color: rgba(44, 43, 43, 0.71);
+  background-color: var(--card-color-soft);
   flex: 1 1 400px;
   padding: 30px;
-  width: 39vw;
-  flex-wrap: wrap;
   border-radius: 20px;
-  color: white;
+  color: var(--text-color);
 }
 
 .action {
-  color: white;
+  color: var(--text-color);
   font-size: 18px;
   text-decoration: none;
 }
@@ -121,17 +133,30 @@ button[type="submit"] {
   margin-top: 20px;
 }
 
-.errorhandle{
-    background-color: rgba(255, 0, 0, 0.32);
-    max-width: 95vw;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 30px;
-    border-radius: 10px;
+.errorhandle {
+  background-color: var(--error-bg);
+  max-width: 95vw;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 30px;
+  border-radius: 10px;
 }
 
-.container2{
+.container2 {
   flex-direction: column;
+}
+
+@media (max-width: 399px) {
+  .profile-card {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #text-repo {
+    display: flex;
+    justify-content: center;
+  }
 }
