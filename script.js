@@ -93,7 +93,7 @@ function displayUserInfo(data) {
   headname.textContent = displayName;
   email.textContent = `@${username}`;
   locationText.textContent = displayLocation;
-  link.textContent = website;
+  link.textContent = website || "No Website";
   date.textContent = `Joined: ${formattedDate}`;
 
   repo.textContent = repositories;
@@ -170,3 +170,20 @@ function displayError(message) {
 
   containers.style.display = "none";
 }
+
+window.addEventListener("load", async () => {
+  try {
+    hideError();
+
+    const userData = await getUserData("octocat");
+    displayUserInfo(userData);
+
+    const reposData = await getUserRepos("octocat");
+    displayTopRepos(reposData);
+
+    containers.style.display = "flex";
+  } catch (error) {
+    console.error(error);
+    displayError("Could not load default profile");
+  }
+});

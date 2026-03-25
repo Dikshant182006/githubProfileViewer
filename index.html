@@ -4,60 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github User Profile</title>
+    <title>GitHub Profile Viewer using GitHub API</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="scrollbar.css">
 </head>
 
 <body>
 
+    <div class="flex">
+        <h1>GitHub Profile Viewer</h1>
+        <p class="subtitle">
+            Search any GitHub username to view profile details and top repositories
+        </p>
+    </div>
+
     <div class="container">
-    <form class="search-container">
-        <input type="text" enterkeyhint="go" placeholder="Search Github username..." id="input">
-        <button type="submit">Go</button>
-    </form>
-    
-    <div class="container2" style="display: none;">
-        <div class="profile-card">
-            <p class="avatar">OC</p>
-            <div class="description">
-                <h2 class="headname"></h2>
-                <p class="email"></p>
-                <p class="location"></p>
-                <p class="link"></p>
-                <p class="date"></p>
+        <form class="search-container">
+            <input type="text" enterkeyhint="go" placeholder="Enter Github username..." id="input">
+            <button type="submit">Go</button>
+        </form>
+
+        <div class="container2" style="display: none;">
+            <div class="profile-card">
+                <p class="avatar">OC</p>
+                <div class="description">
+                    <h2 class="headname"></h2>
+                    <p class="email"></p>
+                    <p class="location"></p>
+                    <p class="link"></p>
+                    <p class="date"></p>
+                </div>
             </div>
+
+            <section class="middle">
+                <div class="repo">
+                    <h3>Repositories</h3>
+                    <h4 id="repo"></h4>
+                </div>
+                <div class="followers">
+                    <h3>Followers</h3>
+                    <h4 id="followers"></h4>
+                </div>
+                <div class="following">
+                    <h3>Following</h3>
+                    <h4 id="following"></h4>
+                </div>
+            </section>
+
+            <section class="top-repo">
+                <h2 id="text-repo">Top Repositories</h2>
+                <div class="header" id="repo-container">
+                </div>
+            </section>
         </div>
-
-        <section class="middle">
-            <div class="repo">
-                <h3>Repositories</h3>
-                <h4 id="repo"></h4>
-            </div>
-            <div class="followers">
-                <h3>Followers</h3>
-                <h4 id="followers"></h4>
-            </div>
-            <div class="following">
-                <h3>Following</h3>
-                <h4 id="following"></h4>
-            </div>
-        </section>
-
-        <section class="top-repo">
-            <h2 id="text-repo">Top Repositories</h2>
-            <div class="header" id="repo-container">
-            </div>
-        </section>
-    </div>
     </div>
 
-<footer class="errorhandle" style="display: none;">
-    <p></p>
-</footer>
-</div>
+    <footer class="errorhandle" style="display: none;">
+        <p></p>
+    </footer>
+    </div>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
