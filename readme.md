@@ -2,6 +2,9 @@
 
 A responsive GitHub User Finder web app that fetches and displays real-time GitHub profile data and top repositories using the GitHub API.
 
+## 🚀 Live Demo
+👉 https://github-profile-viewer-dikshant.netlify.app/
+
 ## 🚀 Features
 
 - Search any GitHub username
