@@ -25,6 +25,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.subtitle{
+  font-size: 14px;
+}
+
 .flex{
   display: flex;
   flex-direction: column;
