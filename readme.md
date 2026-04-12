@@ -33,7 +33,7 @@ A responsive GitHub User Finder web app that fetches and displays real-time GitH
 ## 📸 Preview
 
 ### Main UI
-<img src="img/main-ui.png.png" width="900" alt="GitHub User Finder UI">
+<img src="img/main-ui.png" width="900" alt="GitHub User Finder UI">
 
 ### Error UI
 <img src="img/error-state.png.png" width="900" alt="GitHub User Finder Error UI">

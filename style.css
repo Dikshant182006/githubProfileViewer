@@ -66,7 +66,7 @@ h1 {
 .container {
   max-width: 1200px;
   margin: 32px auto 0;
-  padding: 20px;
+  margin-bottom: 50px;
 }
 
 .search-container {
@@ -110,7 +110,7 @@ button[type="submit"] {
   font-weight: 700;
   cursor: pointer;
   font-size: 16px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  /* transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease; */
   box-shadow: 0 10px 24px rgba(124, 58, 237, 0.3);
 }
 
@@ -416,4 +416,39 @@ button[type="submit"]:active {
   .repo-card {
     padding: 20px;
   }
+}
+
+.repo-card {
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.repo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.repo-card:hover::before {
+  opacity: 1;
+}
+
+.repo-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+body {
+  background: linear-gradient(270deg, #0f172a, #1e293b, #0f172a);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
